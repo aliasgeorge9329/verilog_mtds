@@ -15,11 +15,13 @@ module mux_4x1_tb();
 
       $monitor("T =%0t, i =%4b, s=%2b, out = %0b", $time, i, s, out);
 
-        s = 2'b00; #10;
-        s = 2'b01; #10;
-        s = 2'b10; #10;
-        s = 2'b11; #10;
-
+        s = 2'b00; #10
+        s = 2'b01; #10
+        s = 2'b10; #10
+        s = 2'b11; #10
+      
+      $dumpfile("mux_4x1.vcd");
+      $dumpvars(0, mux_4x1_tb);
       $finish;
 
     end
