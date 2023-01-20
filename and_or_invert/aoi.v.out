@@ -1,0 +1,38 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000138f09c2df0 .scope module, "aoi" "aoi" 2 2;
+ .timescale 0 0;
+    .port_info 0 /INPUT 5 "xin";
+    .port_info 1 /OUTPUT 1 "y";
+L_00000138f09c3160 .functor AND 1, L_00000138f09f1b70, L_00000138f09f18f0, C4<1>, C4<1>;
+L_00000138f09c38c0 .functor AND 1, L_00000138f09f1530, L_00000138f09f17b0, L_00000138f09f1990, C4<1>;
+RS_00000138f09f70c8 .resolv tri, L_00000138f09c3160, L_00000138f09c38c0;
+o00000138f09f70f8 .functor BUFZ 1, C4<z>; HiZ drive
+L_00000138f093e660 .functor OR 1, RS_00000138f09f70c8, o00000138f09f70f8, C4<0>, C4<0>;
+v00000138f09c3500_0 .net *"_ivl_11", 0 0, L_00000138f09f1990;  1 drivers
+v00000138f09c3720_0 .net *"_ivl_2", 0 0, L_00000138f09f1b70;  1 drivers
+v00000138f09c2f80_0 .net *"_ivl_4", 0 0, L_00000138f09f18f0;  1 drivers
+v00000138f09c3020_0 .net *"_ivl_7", 0 0, L_00000138f09f1530;  1 drivers
+v00000138f09c30c0_0 .net *"_ivl_9", 0 0, L_00000138f09f17b0;  1 drivers
+v00000138f093e2c0_0 .net8 "out1", 0 0, RS_00000138f09f70c8;  2 drivers
+v00000138f093e360_0 .net "out2", 0 0, o00000138f09f70f8;  0 drivers
+o00000138f09f7128 .functor BUFZ 5, C4<zzzzz>; HiZ drive
+v00000138f093e400_0 .net "xin", 4 0, o00000138f09f7128;  0 drivers
+v00000138f093e4a0_0 .net "y", 0 0, L_00000138f093e660;  1 drivers
+L_00000138f09f1b70 .part o00000138f09f7128, 0, 1;
+L_00000138f09f18f0 .part o00000138f09f7128, 1, 1;
+L_00000138f09f1530 .part o00000138f09f7128, 2, 1;
+L_00000138f09f17b0 .part o00000138f09f7128, 3, 1;
+L_00000138f09f1990 .part o00000138f09f7128, 4, 1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "aoi.v";

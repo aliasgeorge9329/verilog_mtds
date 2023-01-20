@@ -1,0 +1,99 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000002803bb0a5f0 .scope module, "mux_4x1_tb" "mux_4x1_tb" 2 3;
+ .timescale 0 0;
+v000002803bb094b0_0 .var "i", 3 0;
+v000002803bb097d0_0 .net "out1", 0 0, L_000002803bb0a140;  1 drivers
+v000002803bb63b50_0 .net "out2", 0 0, L_000002803bb0a0d0;  1 drivers
+v000002803bb62430_0 .var "sel", 1 0;
+v000002803bb621b0_0 .net "y", 0 0, L_000002803bb0a220;  1 drivers
+L_000002803bb633d0 .part v000002803bb094b0_0, 0, 1;
+L_000002803bb63970 .part v000002803bb094b0_0, 1, 1;
+L_000002803bb63a10 .part v000002803bb62430_0, 0, 1;
+L_000002803bb63e70 .part v000002803bb094b0_0, 2, 1;
+L_000002803bb63ab0 .part v000002803bb094b0_0, 3, 1;
+L_000002803bb62b10 .part v000002803bb62430_0, 0, 1;
+L_000002803bb62d90 .part v000002803bb62430_0, 1, 1;
+S_000002803bb16500 .scope module, "m1" "mux_2x1" 2 9, 3 2 0, S_000002803bb0a5f0;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "y";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /INPUT 1 "b";
+    .port_info 3 /INPUT 1 "sel";
+L_000002803bb09ff0 .functor NOT 1, L_000002803bb63a10, C4<0>, C4<0>, C4<0>;
+L_000002803bb09c70 .functor AND 1, L_000002803bb633d0, L_000002803bb09ff0, C4<1>, C4<1>;
+L_000002803bb09dc0 .functor AND 1, L_000002803bb63970, L_000002803bb63a10, C4<1>, C4<1>;
+L_000002803bb0a140 .functor OR 1, L_000002803bb09c70, L_000002803bb09dc0, C4<0>, C4<0>;
+v000002803bb095f0_0 .net "a", 0 0, L_000002803bb633d0;  1 drivers
+v000002803bb09550_0 .net "b", 0 0, L_000002803bb63970;  1 drivers
+v000002803bb08e70_0 .net "out1", 0 0, L_000002803bb09c70;  1 drivers
+v000002803bb08dd0_0 .net "out2", 0 0, L_000002803bb09dc0;  1 drivers
+v000002803bb09af0_0 .net "sel", 0 0, L_000002803bb63a10;  1 drivers
+v000002803bb092d0_0 .net "selb", 0 0, L_000002803bb09ff0;  1 drivers
+v000002803bb09190_0 .net "y", 0 0, L_000002803bb0a140;  alias, 1 drivers
+S_000002803bb16690 .scope module, "m2" "mux_2x1" 2 10, 3 2 0, S_000002803bb0a5f0;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "y";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /INPUT 1 "b";
+    .port_info 3 /INPUT 1 "sel";
+L_000002803bb0a060 .functor NOT 1, L_000002803bb62b10, C4<0>, C4<0>, C4<0>;
+L_000002803bb0a300 .functor AND 1, L_000002803bb63e70, L_000002803bb0a060, C4<1>, C4<1>;
+L_000002803bb09c00 .functor AND 1, L_000002803bb63ab0, L_000002803bb62b10, C4<1>, C4<1>;
+L_000002803bb0a0d0 .functor OR 1, L_000002803bb0a300, L_000002803bb09c00, C4<0>, C4<0>;
+v000002803bb09870_0 .net "a", 0 0, L_000002803bb63e70;  1 drivers
+v000002803bb09410_0 .net "b", 0 0, L_000002803bb63ab0;  1 drivers
+v000002803bb09690_0 .net "out1", 0 0, L_000002803bb0a300;  1 drivers
+v000002803bb099b0_0 .net "out2", 0 0, L_000002803bb09c00;  1 drivers
+v000002803bb08c90_0 .net "sel", 0 0, L_000002803bb62b10;  1 drivers
+v000002803bb09910_0 .net "selb", 0 0, L_000002803bb0a060;  1 drivers
+v000002803bb09730_0 .net "y", 0 0, L_000002803bb0a0d0;  alias, 1 drivers
+S_000002803bb16820 .scope module, "m3" "mux_2x1" 2 11, 3 2 0, S_000002803bb0a5f0;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "y";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /INPUT 1 "b";
+    .port_info 3 /INPUT 1 "sel";
+L_000002803bb09ce0 .functor NOT 1, L_000002803bb62d90, C4<0>, C4<0>, C4<0>;
+L_000002803bb09d50 .functor AND 1, L_000002803bb0a140, L_000002803bb09ce0, C4<1>, C4<1>;
+L_000002803bb09ea0 .functor AND 1, L_000002803bb0a0d0, L_000002803bb62d90, C4<1>, C4<1>;
+L_000002803bb0a220 .functor OR 1, L_000002803bb09d50, L_000002803bb09ea0, C4<0>, C4<0>;
+v000002803bb08f10_0 .net "a", 0 0, L_000002803bb0a140;  alias, 1 drivers
+v000002803bb08fb0_0 .net "b", 0 0, L_000002803bb0a0d0;  alias, 1 drivers
+v000002803bb08bf0_0 .net "out1", 0 0, L_000002803bb09d50;  1 drivers
+v000002803bb09050_0 .net "out2", 0 0, L_000002803bb09ea0;  1 drivers
+v000002803bb090f0_0 .net "sel", 0 0, L_000002803bb62d90;  1 drivers
+v000002803bb08d30_0 .net "selb", 0 0, L_000002803bb09ce0;  1 drivers
+v000002803bb09a50_0 .net "y", 0 0, L_000002803bb0a220;  alias, 1 drivers
+    .scope S_000002803bb0a5f0;
+T_0 ;
+    %vpi_call 2 15 "$monitor", "T=%0t, i=%4b, sel=%1b, y=%0b", $time, v000002803bb094b0_0, v000002803bb62430_0, v000002803bb621b0_0 {0 0 0};
+    %pushi/vec4 10, 0, 4;
+    %store/vec4 v000002803bb094b0_0, 0, 4;
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v000002803bb62430_0, 0, 2;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 2;
+    %store/vec4 v000002803bb62430_0, 0, 2;
+    %delay 10, 0;
+    %pushi/vec4 2, 0, 2;
+    %store/vec4 v000002803bb62430_0, 0, 2;
+    %delay 10, 0;
+    %pushi/vec4 3, 0, 2;
+    %store/vec4 v000002803bb62430_0, 0, 2;
+    %delay 10, 0;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "mux_4x1_tb.v";
+    "./mux_2x1.v";
