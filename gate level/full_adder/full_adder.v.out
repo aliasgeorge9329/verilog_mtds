@@ -1,0 +1,49 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001eae25b2d00 .scope module, "full_adder" "full_adder" 2 1;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "cout";
+    .port_info 1 /OUTPUT 1 "s";
+    .port_info 2 /INPUT 1 "a";
+    .port_info 3 /INPUT 1 "b";
+    .port_info 4 /INPUT 1 "c";
+L_000001eae262fc90 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v000001eae25b2e90_0 .net *"_ivl_10", 0 0, L_000001eae262fc90;  1 drivers
+v000001eae25b2f30_0 .net *"_ivl_11", 1 0, L_000001eae25e17b0;  1 drivers
+v000001eae25b2fd0_0 .net *"_ivl_13", 1 0, L_000001eae25e1e90;  1 drivers
+L_000001eae262fcd8 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v000001eae25b3070_0 .net *"_ivl_16", 0 0, L_000001eae262fcd8;  1 drivers
+v000001eae25b3110_0 .net *"_ivl_17", 1 0, L_000001eae25e1850;  1 drivers
+v000001eae259eb50_0 .net *"_ivl_3", 1 0, L_000001eae25e15d0;  1 drivers
+L_000001eae262fc48 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v000001eae259ebf0_0 .net *"_ivl_6", 0 0, L_000001eae262fc48;  1 drivers
+v000001eae259ec90_0 .net *"_ivl_7", 1 0, L_000001eae25e1fd0;  1 drivers
+o000001eae25e7158 .functor BUFZ 1, C4<z>; HiZ drive
+v000001eae259ed30_0 .net "a", 0 0, o000001eae25e7158;  0 drivers
+o000001eae25e7188 .functor BUFZ 1, C4<z>; HiZ drive
+v000001eae259ee60_0 .net "b", 0 0, o000001eae25e7188;  0 drivers
+o000001eae25e71b8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001eae259ef00_0 .net "c", 0 0, o000001eae25e71b8;  0 drivers
+v000001eae25e1f30_0 .net "cout", 0 0, L_000001eae25e1df0;  1 drivers
+o000001eae25e7218 .functor BUFZ 1, C4<z>; HiZ drive
+v000001eae25e1670_0 .net "s", 0 0, o000001eae25e7218;  0 drivers
+v000001eae25e1710_0 .net "sum", 0 0, L_000001eae25e18f0;  1 drivers
+L_000001eae25e1df0 .part L_000001eae25e1850, 1, 1;
+L_000001eae25e18f0 .part L_000001eae25e1850, 0, 1;
+L_000001eae25e15d0 .concat [ 1 1 0 0], o000001eae25e7158, L_000001eae262fc48;
+L_000001eae25e1fd0 .concat [ 1 1 0 0], o000001eae25e7188, L_000001eae262fc90;
+L_000001eae25e17b0 .arith/sum 2, L_000001eae25e15d0, L_000001eae25e1fd0;
+L_000001eae25e1e90 .concat [ 1 1 0 0], o000001eae25e71b8, L_000001eae262fcd8;
+L_000001eae25e1850 .arith/sum 2, L_000001eae25e17b0, L_000001eae25e1e90;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "full_adder.v";

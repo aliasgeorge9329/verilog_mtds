@@ -1,0 +1,57 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000002957f022df0 .scope module, "prime" "prime" 2 1;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "out";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /INPUT 1 "b";
+    .port_info 3 /INPUT 1 "c";
+    .port_info 4 /INPUT 1 "d";
+o000002957f057228 .functor BUFZ 1, C4<z>; HiZ drive
+L_000002957f00ef50 .functor NOT 1, o000002957f057228, C4<0>, C4<0>, C4<0>;
+o000002957f057258 .functor BUFZ 1, C4<z>; HiZ drive
+L_000002957f0237d0 .functor NOT 1, o000002957f057258, C4<0>, C4<0>, C4<0>;
+L_000002957f023390 .functor AND 1, L_000002957f00ef50, L_000002957f0237d0, C4<1>, C4<1>;
+L_000002957f023020 .functor NOT 1, o000002957f057228, C4<0>, C4<0>, C4<0>;
+o000002957f0572b8 .functor BUFZ 1, C4<z>; HiZ drive
+L_000002957f023090 .functor AND 1, L_000002957f023020, o000002957f0572b8, C4<1>, C4<1>;
+L_000002957f023100 .functor OR 1, L_000002957f023390, L_000002957f023090, C4<0>, C4<0>;
+L_000002957f053bb0 .functor NOT 1, o000002957f057258, C4<0>, C4<0>, C4<0>;
+o000002957f057288 .functor BUFZ 1, C4<z>; HiZ drive
+L_000002957f053c20 .functor AND 1, L_000002957f053bb0, o000002957f057288, C4<1>, C4<1>;
+L_000002957f0a01b0 .functor AND 1, L_000002957f053c20, o000002957f0572b8, C4<1>, C4<1>;
+L_000002957f09fd50 .functor OR 1, L_000002957f023100, L_000002957f0a01b0, C4<0>, C4<0>;
+L_000002957f09ff10 .functor NOT 1, o000002957f057288, C4<0>, C4<0>, C4<0>;
+L_000002957f09fff0 .functor AND 1, o000002957f057258, L_000002957f09ff10, C4<1>, C4<1>;
+L_000002957f09fe30 .functor AND 1, L_000002957f09fff0, o000002957f0572b8, C4<1>, C4<1>;
+L_000002957f09fce0 .functor OR 1, L_000002957f09fd50, L_000002957f09fe30, C4<0>, C4<0>;
+v000002957f0235b0_0 .net *"_ivl_0", 0 0, L_000002957f00ef50;  1 drivers
+v000002957f022f80_0 .net *"_ivl_10", 0 0, L_000002957f023100;  1 drivers
+v000002957f052c20_0 .net *"_ivl_12", 0 0, L_000002957f053bb0;  1 drivers
+v000002957f053620_0 .net *"_ivl_14", 0 0, L_000002957f053c20;  1 drivers
+v000002957f053940_0 .net *"_ivl_16", 0 0, L_000002957f0a01b0;  1 drivers
+v000002957f052b80_0 .net *"_ivl_18", 0 0, L_000002957f09fd50;  1 drivers
+v000002957f0536c0_0 .net *"_ivl_2", 0 0, L_000002957f0237d0;  1 drivers
+v000002957f0531c0_0 .net *"_ivl_20", 0 0, L_000002957f09ff10;  1 drivers
+v000002957f053260_0 .net *"_ivl_22", 0 0, L_000002957f09fff0;  1 drivers
+v000002957f052fe0_0 .net *"_ivl_24", 0 0, L_000002957f09fe30;  1 drivers
+v000002957f053800_0 .net *"_ivl_4", 0 0, L_000002957f023390;  1 drivers
+v000002957f0534e0_0 .net *"_ivl_6", 0 0, L_000002957f023020;  1 drivers
+v000002957f052d60_0 .net *"_ivl_8", 0 0, L_000002957f023090;  1 drivers
+v000002957f052cc0_0 .net "a", 0 0, o000002957f057228;  0 drivers
+v000002957f053760_0 .net "b", 0 0, o000002957f057258;  0 drivers
+v000002957f053080_0 .net "c", 0 0, o000002957f057288;  0 drivers
+v000002957f053300_0 .net "d", 0 0, o000002957f0572b8;  0 drivers
+v000002957f0538a0_0 .net "out", 0 0, L_000002957f09fce0;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "prime.v";

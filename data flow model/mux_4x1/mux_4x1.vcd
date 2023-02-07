@@ -1,0 +1,28 @@
+$date
+	Fri Jan 20 08:49:28 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module mux_4x1_tb $end
+$var wire 1 ! out $end
+$var reg 4 " i [3:0] $end
+$var reg 2 # s [1:0] $end
+$scope module m0 $end
+$var wire 4 $ i [3:0] $end
+$var wire 2 % s [1:0] $end
+$var wire 1 ! out $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#40
+$dumpvars
+b11 %
+b1101 $
+b11 #
+b1101 "
+0!
+$end

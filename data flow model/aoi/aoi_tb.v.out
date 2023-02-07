@@ -1,0 +1,66 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001abc948a200 .scope module, "aoi_tb" "aoi_tb" 2 3;
+ .timescale 0 0;
+v000001abc958a130_0 .var "xin", 4 0;
+v000001abc9589910_0 .net "y", 0 0, L_000001abc9544550;  1 drivers
+S_000001abc9545af0 .scope module, "DUT" "aoi" 2 8, 3 2 0, S_000001abc948a200;
+ .timescale 0 0;
+    .port_info 0 /INPUT 5 "xin";
+    .port_info 1 /OUTPUT 1 "y";
+L_000001abc9545e60 .functor AND 1, L_000001abc958a630, L_000001abc958a4f0, C4<1>, C4<1>;
+L_000001abc9545ed0 .functor AND 1, L_000001abc9589cd0, L_000001abc9589d70, C4<1>, C4<1>;
+L_000001abc95446a0 .functor AND 1, L_000001abc9545ed0, L_000001abc958a6d0, C4<1>, C4<1>;
+L_000001abc9544550 .functor OR 1, L_000001abc9545e60, L_000001abc95446a0, C4<0>, C4<0>;
+v000001abc9513540_0 .net *"_ivl_1", 0 0, L_000001abc958a630;  1 drivers
+v000001abc948a390_0 .net *"_ivl_10", 0 0, L_000001abc9545ed0;  1 drivers
+v000001abc9513760_0 .net *"_ivl_13", 0 0, L_000001abc958a6d0;  1 drivers
+v000001abc9513120_0 .net *"_ivl_14", 0 0, L_000001abc95446a0;  1 drivers
+v000001abc9545c80_0 .net *"_ivl_3", 0 0, L_000001abc958a4f0;  1 drivers
+v000001abc9545d20_0 .net *"_ivl_4", 0 0, L_000001abc9545e60;  1 drivers
+v000001abc9545dc0_0 .net *"_ivl_7", 0 0, L_000001abc9589cd0;  1 drivers
+v000001abc9589a50_0 .net *"_ivl_9", 0 0, L_000001abc9589d70;  1 drivers
+v000001abc958a3b0_0 .net "xin", 4 0, v000001abc958a130_0;  1 drivers
+v000001abc9589870_0 .net "y", 0 0, L_000001abc9544550;  alias, 1 drivers
+L_000001abc958a630 .part v000001abc958a130_0, 0, 1;
+L_000001abc958a4f0 .part v000001abc958a130_0, 1, 1;
+L_000001abc9589cd0 .part v000001abc958a130_0, 2, 1;
+L_000001abc9589d70 .part v000001abc958a130_0, 3, 1;
+L_000001abc958a6d0 .part v000001abc958a130_0, 4, 1;
+    .scope S_000001abc948a200;
+T_0 ;
+    %vpi_call 2 12 "$monitor", "T=%0t, xin=%5b, y=%0b", $time, v000001abc958a130_0, v000001abc9589910_0 {0 0 0};
+    %pushi/vec4 0, 0, 5;
+    %store/vec4 v000001abc958a130_0, 0, 5;
+    %delay 10, 0;
+    %pushi/vec4 28, 0, 5;
+    %store/vec4 v000001abc958a130_0, 0, 5;
+    %delay 10, 0;
+    %pushi/vec4 31, 0, 5;
+    %store/vec4 v000001abc958a130_0, 0, 5;
+    %delay 10, 0;
+    %pushi/vec4 29, 0, 5;
+    %store/vec4 v000001abc958a130_0, 0, 5;
+    %delay 10, 0;
+    %pushi/vec4 5, 0, 5;
+    %store/vec4 v000001abc958a130_0, 0, 5;
+    %delay 10, 0;
+    %pushi/vec4 20, 0, 5;
+    %store/vec4 v000001abc958a130_0, 0, 5;
+    %delay 10, 0;
+    %vpi_call 2 21 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "aoi_tb.v";
+    "./aoi.v";
