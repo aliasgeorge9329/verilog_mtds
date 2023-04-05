@@ -1,19 +1,16 @@
 `include "half_adder.v"
 module tb;
 
-    reg  a;
-    reg  b;
+    reg a, b;
+    wire sum, carry;
 
-    wire  s;
-    wire  carr;
-
-    half_adder h0(.cout(carr), .s(s), .a(a), .b(b));
+    half_adder h0(.cout(carry), .s(sum), .a(a), .b(b));
 
     initial begin
 
         $dumpfile("tb.vcd");
         $dumpvars(0, tb);
-        $monitor("T= %0t, a=%b,b=%b s=%0b,carr=%0b",$time,a,b,s,carr);
+        $monitor("T= %00t, a=%b,b=%b, sum=%b,carry=%b",$time,a,b,sum,carry);
 
         {a,b} = 3'd0; #10
         {a,b} = 3'd1; #10

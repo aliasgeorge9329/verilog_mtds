@@ -1,5 +1,5 @@
 $date
-	Tue Feb 07 04:35:46 2023
+	Thu Feb 09 15:15:35 2023
 $end
 $version
 	Icarus Verilog
@@ -8,8 +8,8 @@ $timescale
 	1s
 $end
 $scope module tb $end
-$var wire 1 ! s $end
-$var wire 1 " carr $end
+$var wire 1 ! sum $end
+$var wire 1 " carry $end
 $var reg 1 # a $end
 $var reg 1 $ b $end
 $scope module h0 $end

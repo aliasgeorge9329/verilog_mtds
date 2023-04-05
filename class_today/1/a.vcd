@@ -1,0 +1,21 @@
+$date
+	Wed Mar 29 18:28:24 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb $end
+$var reg 1 ! found $end
+$var reg 8 " num [7:0] $end
+$var integer 32 # count [31:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b11 #
+b1100 "
+1!
+$end

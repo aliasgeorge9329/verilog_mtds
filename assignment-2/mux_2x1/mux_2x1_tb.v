@@ -9,6 +9,8 @@ module mux_2x1_tb;
 
     initial begin
       
+      $dumpfile("tb.vcd");
+      $dumpvars(0, mux_2x1_tb);
       $monitor("T=%0t, a=%0b, b=%0b, sel=%0b, y=%0b",$time,a,b,sel,y);
 
           a=0; b=0; sel=0;

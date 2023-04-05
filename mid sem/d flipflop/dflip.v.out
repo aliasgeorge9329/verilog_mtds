@@ -1,0 +1,44 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001cb99746ca0 .scope module, "dff" "dff" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "d";
+    .port_info 1 /INPUT 1 "rst";
+    .port_info 2 /INPUT 1 "clk";
+    .port_info 3 /OUTPUT 1 "q";
+o000001cb99746e38 .functor BUFZ 1, C4<z>; HiZ drive
+v000001cb99713390_0 .net "clk", 0 0, o000001cb99746e38;  0 drivers
+o000001cb99746e68 .functor BUFZ 1, C4<z>; HiZ drive
+v000001cb997130e0_0 .net "d", 0 0, o000001cb99746e68;  0 drivers
+v000001cb9987d470_0 .var "q", 0 0;
+o000001cb99746ec8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001cb9987d510_0 .net "rst", 0 0, o000001cb99746ec8;  0 drivers
+E_000001cb997452d0 .event posedge, v000001cb99713390_0;
+    .scope S_000001cb99746ca0;
+T_0 ;
+    %wait E_000001cb997452d0;
+    %load/vec4 v000001cb9987d510_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v000001cb9987d470_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v000001cb997130e0_0;
+    %assign/vec4 v000001cb9987d470_0, 0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "dflip.v";

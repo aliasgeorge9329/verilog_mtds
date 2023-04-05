@@ -11,7 +11,7 @@ module tb;
 
         $dumpfile("tb.vcd");
         $dumpvars(0, tb);
-        $monitor("T= %0t, i=%b : out=%b",$time,i,out);
+        $monitor("T= %0t, i=%d : out=%b",$time,i,out);
 
         i = 4'd0; #10
         i = 4'd1; #10

@@ -1,0 +1,23 @@
+$date
+	Wed Mar 29 18:10:49 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb $end
+$var reg 1 ! clock $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+$end
+#10
+1!
+#20
+0!
+#30
+1!

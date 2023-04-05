@@ -1,5 +1,5 @@
 $date
-	Tue Feb 07 09:20:52 2023
+	Wed Feb 08 11:19:46 2023
 $end
 $version
 	Icarus Verilog
@@ -18,11 +18,23 @@ $var wire 1 ! out $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
-#40
+#0
 $dumpvars
-b11 %
+b0 %
 b1101 $
-b11 #
+b0 #
 b1101 "
 1!
 $end
+#10
+0!
+b1 #
+b1 %
+#20
+1!
+b10 #
+b10 %
+#30
+b11 #
+b11 %
+#40
